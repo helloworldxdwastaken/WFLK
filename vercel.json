@@ -32,17 +32,57 @@
     }
   ],
   "rewrites": [
-    { "source": "/about", "destination": "/Public/about.html" },
-    { "source": "/archives", "destination": "/Public/archives.html" },
-    { "source": "/programs", "destination": "/Public/programs.html" },
-    { "source": "/talk-to-tina", "destination": "/Public/talk-to-tina.html" },
-    { "source": "/beyond-the-veil", "destination": "/Public/beyond-the-veil.html" },
-    { "source": "/blog", "destination": "/Public/blog.html" },
-    { "source": "/blog/wsqk-stranger-things-radio", "destination": "/Public/blog/wsqk-stranger-things-radio.html" },
-    { "source": "/blog/80s-songs-radio-station", "destination": "/Public/blog/80s-songs-radio-station.html" },
-    { "source": "/blog/best-online-radio-station", "destination": "/Public/blog/best-online-radio-station.html" },
-    { "source": "/blog/listen-80s-music-free", "destination": "/Public/blog/listen-80s-music-free.html" },
-    { "source": "/", "destination": "/Public/index.html" },
-    { "source": "/:path*", "destination": "/Public/:path*" }
+    {
+      "source": "/about",
+      "destination": "/Public/about.html"
+    },
+    {
+      "source": "/archives",
+      "destination": "/Public/archives.html"
+    },
+    {
+      "source": "/programs",
+      "destination": "/Public/programs.html"
+    },
+    {
+      "source": "/talk-to-tina",
+      "destination": "/Public/talk-to-tina.html"
+    },
+    {
+      "source": "/beyond-the-veil",
+      "destination": "/Public/beyond-the-veil.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/Public/blog.html"
+    },
+    {
+      "source": "/blog/wsqk-stranger-things-radio",
+      "destination": "/Public/blog/wsqk-stranger-things-radio.html"
+    },
+    {
+      "source": "/blog/80s-songs-radio-station",
+      "destination": "/Public/blog/80s-songs-radio-station.html"
+    },
+    {
+      "source": "/blog/best-online-radio-station",
+      "destination": "/Public/blog/best-online-radio-station.html"
+    },
+    {
+      "source": "/blog/listen-80s-music-free",
+      "destination": "/Public/blog/listen-80s-music-free.html"
+    },
+    {
+      "source": "/",
+      "destination": "/Public/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/Public/blog/:slug.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/Public/:path*"
+    }
   ]
 }
