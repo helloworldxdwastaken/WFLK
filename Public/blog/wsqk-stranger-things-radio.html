@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan-Made Stranger Things Radio: WSQK The Squawk to WFLK The Flock</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="How fans created a real 80s radio experience inspired by WSQK The Squawk from Stranger Things. Discover WFLK The Flock - the ultimate fan-made Hawkins radio station.">
+    <meta name="keywords" content="WSQK The Squawk, Stranger Things radio, Hawkins Indiana radio station, WFLK The Flock, fan-made radio, 80s radio experience">
+    <meta name="author" content="WFLK The Flock">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.wflktheflock.com/blog/wsqk-stranger-things-radio">
+    <meta property="og:title" content="Fan-Made Stranger Things Radio: From WSQK to WFLK">
+    <meta property="og:description" content="How fans created a real 80s radio experience inspired by the fictional Hawkins, Indiana station.">
+    <meta property="og:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+    <meta property="og:site_name" content="WFLK The Flock">
+    <meta property="article:published_time" content="2026-01-20">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fan-Made Stranger Things Radio: From WSQK to WFLK">
+    <meta name="twitter:description" content="How fans created a real 80s radio experience inspired by Stranger Things.">
+    <meta name="twitter:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/Resources/logo/WFLK_The_Squawk_1767560808.webp">
+    <link rel="apple-touch-icon" href="/Resources/logo/WFLK_The_Squawk_1767560808.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.wflktheflock.com/blog/wsqk-stranger-things-radio">
+    
+    <link rel="preconnect" href="https://azura.typicalmedia.net" crossorigin>
+    
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('/fonts/bebas-neue.woff2') format('woff2');
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Righteous';
+            src: url('/fonts/righteous.woff2') format('woff2');
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Crimson Text';
+            src: url('/fonts/crimson-text-regular.woff2') format('woff2');
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --st-red: #e71d36;
+            --st-dark: #0a0a0a;
+            --st-darker: #050505;
+            --st-light: #f5f5f5;
+            --st-yellow: #ffc857;
+            --st-blue: #2ec4b6;
+        }
+        
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: var(--st-darker);
+            color: var(--st-light);
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+        
+        .header {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(231, 29, 54, 0.2);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo { height: 45px; }
+        
+        .back-link {
+            color: var(--st-light);
+            text-decoration: none;
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover { color: var(--st-red); }
+        
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Righteous', sans-serif;
+        }
+        
+        .article-tag {
+            background: var(--st-red);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(36px, 6vw, 52px);
+            letter-spacing: 2px;
+            color: var(--st-yellow);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .article-excerpt {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(231, 29, 54, 0.2);
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: var(--st-red);
+            margin: 45px 0 20px;
+        }
+        
+        .article-body ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .article-body li {
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 17px;
+        }
+        
+        .article-body blockquote {
+            border-left: 3px solid var(--st-red);
+            padding: 20px 30px;
+            margin: 30px 0;
+            background: rgba(231, 29, 54, 0.05);
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+        }
+        
+        .article-body strong { color: var(--st-yellow); }
+        
+        .article-body a {
+            color: var(--st-blue);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .article-body a:hover { border-bottom-color: var(--st-blue); }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(231, 29, 54, 0.15) 0%, rgba(231, 29, 54, 0.05) 100%);
+            border: 1px solid rgba(231, 29, 54, 0.3);
+            border-radius: 10px;
+            padding: 35px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: var(--st-light);
+            margin-bottom: 10px;
+        }
+        
+        .cta-box p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: var(--st-red);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: #c41830;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(231, 29, 54, 0.4);
+        }
+        
+        .related-articles {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(231, 29, 54, 0.2);
+        }
+        
+        .related-articles h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: var(--st-light);
+            margin-bottom: 20px;
+        }
+        
+        .related-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .related-list a {
+            color: var(--st-blue);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: color 0.2s;
+        }
+        
+        .related-list a:hover { color: var(--st-yellow); }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(231, 29, 54, 0.2);
+            margin-top: 60px;
+        }
+        
+        .footer-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            color: var(--st-red);
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover { color: var(--st-red); }
+        
+        @media (max-width: 768px) {
+            .header { padding: 15px 20px; }
+            .article-container { padding: 40px 20px; }
+            h1 { font-size: 32px; }
+            .article-body p { font-size: 16px; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Fan-Made Stranger Things Radio: From WSQK The Squawk to WFLK The Flock",
+        "description": "How fans created a real 80s radio experience inspired by the fictional Hawkins, Indiana station",
+        "datePublished": "2026-01-20",
+        "dateModified": "2026-01-24",
+        "author": {
+            "@type": "Organization",
+            "name": "WFLK The Flock"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "WFLK The Flock",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.wflktheflock.com/Resources/logo/WFLK_The_Squawk_1767560808.webp"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.wflktheflock.com/blog/wsqk-stranger-things-radio"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/">
+                <img src="/Resources/logo/WFLK_The_Squawk_1767560808.webp" alt="WFLK The Flock" class="logo">
+            </a>
+            <a href="/blog" class="back-link">← Back to Blog</a>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <div class="article-meta">
+            <span class="article-tag">Featured</span>
+            <time datetime="2026-01-20">January 20, 2026</time>
+            <span>8 min read</span>
+        </div>
+        
+        <h1>Fan-Made Stranger Things Radio: From WSQK The Squawk to WFLK The Flock</h1>
+        
+        <p class="article-excerpt">How fans created a real 80s radio experience inspired by the fictional Hawkins, Indiana station</p>
+        
+        <div class="article-body">
+            <p>When Netflix's <strong>Stranger Things</strong> introduced the world to <strong>WSQK "The Squawk"</strong>, it wasn't just another background detail in the show's meticulously crafted 1980s aesthetic. It became a symbol of everything we love about vintage radio – and inspired fans to bring that magic into the real world.</p>
+
+            <h2>What Made WSQK The Squawk Special</h2>
+            <p><strong>WSQK The Squawk</strong> is the fictional radio station from Hawkins, Indiana that appears throughout Stranger Things. Broadcasting the hits of 1983-1986, The Squawk represents the golden age of <strong>small-town American radio</strong>: charismatic DJs, local commercials, community announcements, and a curated soundtrack that perfectly captures the era.</p>
+
+            <p>For many viewers, The Squawk wasn't just part of the show – it felt like something they wanted to actually tune into. That desire sparked a movement.</p>
+
+            <h2>The Birth of WFLK The Flock</h2>
+            <p>Enter <strong>WFLK The Flock</strong> – a <strong>fan-made radio station</strong> that brings the spirit of WSQK to life. While we can't use Netflix's intellectual property directly, we've created something even better: a fully realized <strong>80s radio experience</strong> that broadcasts 24/7.</p>
+
+            <p>Think of us as the station from the next town over. While The Squawk was serving Hawkins, The Flock was keeping neighboring communities entertained with the same incredible music, the same vintage vibes, and the same community spirit that made 80s radio legendary.</p>
+
+            <h2>What You'll Experience</h2>
+            <ul>
+                <li><strong>Non-stop 80s hits</strong> – From synthpop to rock anthems, hair metal to new wave</li>
+                <li><strong>Authentic DJ breaks</strong> – Period-accurate hosting style that transports you back in time</li>
+                <li><strong>Vintage commercials</strong> – Fictional ads that capture small-town charm</li>
+                <li><strong>Easter eggs</strong> – Hidden references for Stranger Things fans</li>
+                <li><strong>Active community</strong> – Join thousands of fans on Discord</li>
+            </ul>
+
+            <blockquote>"The signal never dies. The Flock flies on." – Our motto captures everything we stand for: keeping the spirit of 80s radio alive for generations to come.</blockquote>
+
+            <h2>Join The Movement</h2>
+            <p>Whether you discovered 80s music through Stranger Things or you lived through the decade yourself, <strong>WFLK The Flock</strong> welcomes you. We're not just a radio station – we're a community of people who believe vintage broadcasting is an art form worth preserving.</p>
+
+            <div class="cta-box">
+                <h3>Start Listening Now</h3>
+                <p>Experience the magic of 80s radio. No algorithms, no subscriptions – just pure nostalgic broadcasting.</p>
+                <a href="/" class="cta-btn">Tune In Free</a>
+            </div>
+        </div>
+        
+        <div class="related-articles">
+            <h3>Related Articles</h3>
+            <div class="related-list">
+                <a href="/blog/80s-songs-radio-station">80s Songs Radio Station: Your Ultimate Guide to Non-Stop Retro Hits</a>
+                <a href="/blog/best-online-radio-station">Best Online Radio Station for Nostalgic 80s Vibes in 2026</a>
+                <a href="/blog/listen-80s-music-free">How to Listen to 80s Music Online for Free</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-brand">WFLK The Flock</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/archives">Archives</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </footer>
+    
+    <script src="/js/router.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# WFLK The Flock - Robots.txt
+# https://www.wflktheflock.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.wflktheflock.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

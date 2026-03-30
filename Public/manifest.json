@@ -1,0 +1,37 @@
+{
+    "name": "WFLK - The Flock Radio",
+    "short_name": "WFLK Radio",
+    "description": "WFLK The Flock - Where The Music Matters. A Stranger Things inspired radio experience.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#e71d36",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "Resources/logo/WFLK_The_Squawk_1767560808.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "Resources/logo/WFLK_The_Squawk_1767560808.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["music", "entertainment"],
+    "shortcuts": [
+        {
+            "name": "Listen Live",
+            "url": "/",
+            "description": "Start listening to WFLK Radio"
+        },
+        {
+            "name": "Store",
+            "url": "https://store.typicalmedia.net/collections/wflk-wsqk",
+            "description": "Visit the WFLK Store"
+        }
+    ]
+}

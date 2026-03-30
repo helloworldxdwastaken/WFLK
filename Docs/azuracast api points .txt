@@ -1,0 +1,12 @@
+AZURACAST API KEY:
+0e8ae69f346c67b5:b7dcbbee8423888c3acdf45829a668ed
+all api docs:
+https://azura.typicalmedia.net/api/nowplaying/189
+
+https://azura.typicalmedia.net/api/nowplaying/189
+https://azura.typicalmedia.net/api/station/189/podcasts
+https://azura.typicalmedia.net/api/station/189/schedule
+webhook: https://discord.com/api/webhooks/1456479972083499059/_rmnBY4c4acm4_NuHZLqmRFacgvTgDg0ZcOpP9cnMlOJ_7r3uMkzf5mOWkN9hJ_G2FUe
+
+Song lookup api https://api.typicalmedia.net/experiences/lookup.php?title=golden&artist=hunterx&lyrics=1
+Song archives ; https://api.typicalmedia.net/api/v1/wsqk/recentlyplayed?limit=3500

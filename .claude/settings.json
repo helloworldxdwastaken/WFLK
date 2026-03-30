@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel ls:*)",
+      "Bash(xargs ls:*)",
+      "Bash(vercel --prod)",
+      "Bash(vercel env:*)",
+      "Bash(openssl rand:*)"
+    ]
+  }
+}

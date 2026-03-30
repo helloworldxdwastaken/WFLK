@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Veil - WFLK The Flock</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Report strange occurrences around town to Beyond the Veil on WFLK The Flock. Something weird happening? We want to hear about it.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wflktheflock.com/beyond-the-veil">
+    <meta property="og:title" content="Beyond the Veil | WFLK The Flock">
+    <meta property="og:description" content="Report strange occurrences around town to Beyond the Veil on WFLK The Flock. Something weird happening? We want to hear about it.">
+    <meta property="og:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="WFLK The Flock">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.wflktheflock.com/beyond-the-veil">
+    <meta name="twitter:title" content="Beyond the Veil | WFLK The Flock">
+    <meta name="twitter:description" content="Report strange occurrences around town to Beyond the Veil on WFLK The Flock. Something weird happening? We want to hear about it.">
+    <meta name="twitter:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="Resources/logo/WFLK_The_Squawk_1767560808.webp">
+    <link rel="apple-touch-icon" href="Resources/logo/WFLK_The_Squawk_1767560808.webp">
+
+    <link rel="preconnect" href="https://azura.typicalmedia.net" crossorigin>
+
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('/fonts/bebas-neue.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Righteous';
+            src: url('/fonts/righteous.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Special Elite';
+            src: url('/fonts/special-elite.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --st-red: #e71d36;
+            --st-red-glow: #ff1744;
+            --st-dark: #0a0a0a;
+            --st-darker: #050505;
+            --st-light: #f5f5f5;
+            --st-yellow: #ffc857;
+            --st-blue: #2ec4b6;
+            --veil-purple: #7b2ff7;
+            --veil-glow: #9d4edd;
+        }
+
+        body {
+            font-family: 'Righteous', sans-serif;
+            background: var(--st-darker);
+            color: var(--st-light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at top, rgba(123, 47, 247, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(123, 47, 247, 0.05) 0%, transparent 50%);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(123, 47, 247, 0.2);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            height: 45px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: var(--st-light);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            text-transform: uppercase;
+        }
+
+        .header-nav a:hover {
+            color: var(--st-red);
+        }
+
+        .header-nav a.active {
+            color: var(--veil-purple);
+        }
+
+        .header-nav a.donate-link {
+            color: var(--st-yellow);
+        }
+
+        .header-nav a.donate-link:hover {
+            color: var(--st-yellow);
+        }
+
+        /* Nav Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+        .nav-dropdown-toggle {
+            color: var(--st-light);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .nav-dropdown-toggle:hover {
+            color: var(--st-red);
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 10, 0.98);
+            border: 1px solid rgba(231, 29, 54, 0.3);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 180px;
+            z-index: 200;
+            margin-top: 10px;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: block;
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--st-light) !important;
+            text-decoration: none;
+            font-size: 12px !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .nav-dropdown-menu a:hover {
+            background: rgba(231, 29, 54, 0.1);
+            color: var(--st-red) !important;
+        }
+        .nav-dropdown-menu a.active {
+            color: var(--veil-purple) !important;
+        }
+
+        .back-link {
+            color: var(--st-light);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--veil-purple);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--st-light);
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            background: var(--veil-purple);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+            background: var(--veil-purple);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 5, 0.98);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            z-index: 1000;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--st-light);
+            text-decoration: none;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--veil-purple);
+        }
+
+        .mobile-menu a.active {
+            color: var(--veil-purple);
+        }
+
+        .mobile-menu-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-top: 10px;
+        }
+        .mobile-submenu-item {
+            font-size: 18px !important;
+            padding-left: 30px !important;
+        }
+
+        /* Main Content */
+        .veil-container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 40px 20px 120px;
+        }
+
+        /* Banner */
+        .veil-banner {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            padding: 50px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(15, 5, 30, 0.95) 0%, rgba(30, 10, 50, 0.9) 50%, rgba(10, 5, 25, 0.95) 100%);
+            border: 1px solid rgba(123, 47, 247, 0.25);
+            box-shadow: 0 0 40px rgba(123, 47, 247, 0.1), inset 0 0 60px rgba(123, 47, 247, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .veil-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(123, 47, 247, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(157, 78, 221, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .veil-banner-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 52px;
+            letter-spacing: 8px;
+            color: var(--veil-purple);
+            text-shadow: 0 0 30px rgba(123, 47, 247, 0.6), 0 0 60px rgba(123, 47, 247, 0.3);
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .veil-banner-sub {
+            font-family: 'Special Elite', monospace;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .veil-banner-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--veil-purple), transparent);
+            margin: 15px auto;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .veil-banner {
+                padding: 35px 20px;
+            }
+            .veil-banner-title {
+                font-size: 36px;
+                letter-spacing: 5px;
+            }
+        }
+
+        /* Form Card */
+        .veil-form-card {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(123, 47, 247, 0.15);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .veil-form-card h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            letter-spacing: 3px;
+            color: var(--veil-purple);
+            margin-bottom: 8px;
+            text-shadow: 0 0 15px rgba(123, 47, 247, 0.4);
+        }
+
+        .veil-form-card .subtitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(123, 47, 247, 0.2);
+            border-radius: 8px;
+            color: var(--st-light);
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--veil-purple);
+            box-shadow: 0 0 10px rgba(123, 47, 247, 0.15);
+        }
+
+        .form-group textarea {
+            min-height: 160px;
+            resize: vertical;
+            font-family: 'Special Elite', monospace;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(123, 47, 247, 0.2);
+            border-radius: 8px;
+            color: var(--st-light);
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            outline: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237b2ff7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+        }
+
+        .form-group select:focus {
+            border-color: var(--veil-purple);
+            box-shadow: 0 0 10px rgba(123, 47, 247, 0.15);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--veil-purple);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: #6622cc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(123, 47, 247, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: rgba(123, 47, 247, 0.1);
+            border: 2px solid var(--veil-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--veil-purple);
+        }
+
+        .success-message h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 3px;
+            color: var(--veil-purple);
+            margin-bottom: 10px;
+        }
+
+        .success-message p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* Floating Player */
+        .floating-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, rgba(26, 10, 10, 0.98), rgba(45, 24, 16, 0.98));
+            border: 1px solid rgba(255, 107, 53, 0.4);
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 50;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .player-play-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: var(--st-red);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .player-play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(231, 29, 54, 0.5);
+        }
+
+        .player-play-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .player-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .player-status {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--st-red);
+        }
+
+        .player-title {
+            font-size: 12px;
+            color: var(--st-light);
+            white-space: nowrap;
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-volume {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-volume-icon {
+            cursor: pointer;
+            color: var(--st-light);
+            display: flex;
+        }
+
+        .player-volume-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .player-volume-slider {
+            width: 80px;
+            height: 4px;
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .player-volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--st-red);
+            cursor: pointer;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(123, 47, 247, 0.2);
+        }
+
+        .footer-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            color: var(--veil-purple);
+            margin-bottom: 8px;
+        }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--veil-purple);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .header-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .veil-container {
+                padding: 20px 15px 120px;
+            }
+
+            .veil-form-card {
+                padding: 25px 20px;
+            }
+
+            .veil-form-card h1 {
+                font-size: 28px;
+            }
+
+            .floating-player {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                border-radius: 16px;
+            }
+
+            .player-volume-slider {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/">
+                <img src="Resources/logo/WFLK_The_Squawk_1767560808.webp" alt="WFLK The Flock" class="header-logo">
+            </a>
+            <nav class="header-nav">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Request &#9662;</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="#" onclick="window.location.href='/'">Song Request</a>
+                        <a href="/talk-to-tina">Talk to Tina</a>
+                        <a href="/beyond-the-veil" class="active">Beyond the Veil</a>
+                    </div>
+                </div>
+                <a href="/archives">Archives</a>
+                <a href="/programs">Programs</a>
+                <a href="#">Apply</a>
+                <a href="https://store.typicalmedia.net/collections/wflk-wsqk" target="_blank">Store</a>
+                <a href="/about">About</a>
+                <a href="https://donate.stripe.com/fZe5nZ7gp9NGemkaEF" target="_blank" class="donate-link">Donate</a>
+            </nav>
+            <a href="/" class="back-link">&larr; Back to Radio</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" onclick="toggleMenu()">Home</a>
+        <span class="mobile-menu-label">Requests</span>
+        <a href="#" onclick="toggleMenu()" class="mobile-submenu-item" id="mobileRequestLink">Song Request</a>
+        <a href="/talk-to-tina" onclick="toggleMenu()" class="mobile-submenu-item">Talk to Tina</a>
+        <a href="/beyond-the-veil" onclick="toggleMenu()" class="mobile-submenu-item active">Beyond the Veil</a>
+        <a href="/archives" onclick="toggleMenu()">Archives</a>
+        <a href="/programs" onclick="toggleMenu()">Programs</a>
+        <a href="https://store.typicalmedia.net/collections/wflk-wsqk" target="_blank">Store</a>
+        <a href="/about" onclick="toggleMenu()">About</a>
+        <a href="https://donate.stripe.com/fZe5nZ7gp9NGemkaEF" target="_blank">Donate</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="veil-container">
+        <!-- Banner -->
+        <div class="veil-banner">
+            <h2 class="veil-banner-title">BEYOND THE VEIL</h2>
+            <div class="veil-banner-line"></div>
+            <p class="veil-banner-sub">Strange occurrences. Unexplained phenomena. Report what you've seen.</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="veil-form-card">
+            <div id="formContainer">
+                <h1>FILE YOUR REPORT</h1>
+                <p class="subtitle">Something strange going on? Weird lights? Unexplained sounds? The Upside Down leaking through? Tell us everything.</p>
+
+                <form id="veilForm">
+                    <!-- Honeypot -->
+                    <div style="position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden;">
+                        <label for="veilWebsite">Website</label>
+                        <input type="text" id="veilWebsite" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Name (optional)</label>
+                        <input type="text" id="veilName" placeholder="Anonymous witness is fine" maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pronouns (optional)</label>
+                        <select id="veilPronouns">
+                            <option value="">Prefer not to say</option>
+                            <option value="he/him">He/Him</option>
+                            <option value="she/her">She/Her</option>
+                            <option value="they/them">They/Them</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location (optional)</label>
+                        <input type="text" id="veilLocation" placeholder="Where did this happen?" maxlength="200">
+                    </div>
+
+                    <div class="form-group">
+                        <label>What happened? *</label>
+                        <textarea id="veilReport" placeholder="Describe what you witnessed..." maxlength="3000" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>When did this happen? (optional)</label>
+                        <input type="text" id="veilWhen" placeholder="e.g. Last Tuesday around midnight" maxlength="200">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Want us to share your report on air?</label>
+                        <select id="veilShare">
+                            <option value="no preference">No preference</option>
+                            <option value="yes">Yes — share it on air!</option>
+                            <option value="no">No — keep it between us</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">SUBMIT REPORT</button>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                </div>
+                <h3>REPORT FILED</h3>
+                <p>Your report has been logged. If the veil is thinning... we'll let the listeners know.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Player -->
+    <div class="floating-player" id="floatingPlayer">
+        <button class="player-play-btn" id="playBtn">
+            <svg viewBox="0 0 24 24">
+                <polygon points="5,3 19,12 5,21"></polygon>
+            </svg>
+        </button>
+        <div class="player-info">
+            <span class="player-status" id="playerStatus">Live Radio</span>
+            <span class="player-title" id="playerTitle">Click to Play</span>
+        </div>
+        <div class="player-volume">
+            <div class="player-volume-icon" id="volumeIcon">
+                <svg viewBox="0 0 24 24" id="volumeSvg">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </div>
+            <input type="range" min="0" max="100" value="80" class="player-volume-slider" id="volumeSlider">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-brand">WFLK The Flock - Broadcasting since 1983</p>
+        <p class="footer-disclaimer">A fan-made parody station inspired by WSQK The Squawk and not affiliated with Netflix or Stranger Things.</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/archives">Archives</a>
+            <a href="/programs">Programs</a>
+            <a href="#">Apply</a>
+            <a href="/talk-to-tina">Talk to Tina</a>
+            <a href="/beyond-the-veil">Beyond the Veil</a>
+            <a href="https://store.typicalmedia.net/collections/wflk-wsqk" target="_blank">Store</a>
+            <a href="/about">About</a>
+            <a href="https://donate.stripe.com/fZe5nZ7gp9NGemkaEF" target="_blank">Donate</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </footer>
+
+    <script>
+        // ============== MOBILE MENU ==============
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        // ============== FORM SUBMISSION ==============
+        const veilForm = document.getElementById('veilForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formContainer = document.getElementById('formContainer');
+        const successMessage = document.getElementById('successMessage');
+
+        veilForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('veilName').value;
+            const pronouns = document.getElementById('veilPronouns').value;
+            const location = document.getElementById('veilLocation').value;
+            const report = document.getElementById('veilReport').value;
+            const when = document.getElementById('veilWhen').value;
+            const share = document.getElementById('veilShare').value;
+            const website = document.getElementById('veilWebsite').value;
+
+            // Validate required field
+            if (!report.trim()) {
+                document.getElementById('veilReport').focus();
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SUBMITTING...';
+
+            try {
+                const body = {
+                    name: name || null,
+                    pronouns: pronouns || null,
+                    location: location || null,
+                    report: report,
+                    when: when || null,
+                    shareOnAir: share,
+                    website
+                };
+
+                const response = await fetch('/api/veil', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+
+                if (response.ok) {
+                    formContainer.style.display = 'none';
+                    successMessage.classList.add('active');
+                    veilForm.reset();
+
+                    setTimeout(() => {
+                        formContainer.style.display = 'block';
+                        successMessage.classList.remove('active');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'SUBMIT REPORT';
+                    }, 5000);
+                } else {
+                    throw new Error('Failed to send');
+                }
+            } catch (error) {
+                alert('Failed to submit report. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'SUBMIT REPORT';
+            }
+        });
+
+        // ============== AUDIO PLAYER WITH CROSS-PAGE PERSISTENCE ==============
+        const STREAM_URL = 'https://azura.typicalmedia.net/listen/wsqk_the_squawk/stream';
+        const NOW_PLAYING_API = 'https://azura.typicalmedia.net/api/nowplaying/189';
+        const PLAYER_STATE_KEY = 'wflk_player_state';
+
+        let isPlaying = false;
+        let isLoading = false;
+        const playBtn = document.getElementById('playBtn');
+        const playerTitle = document.getElementById('playerTitle');
+        const playerStatus = document.getElementById('playerStatus');
+
+        const audioStream = new Audio();
+        audioStream.preload = 'none';
+
+        const volumeSlider = document.getElementById('volumeSlider');
+        const volumeIcon = document.getElementById('volumeIcon');
+
+        function savePlayerState() {
+            localStorage.setItem(PLAYER_STATE_KEY, JSON.stringify({
+                isPlaying: isPlaying, volume: audioStream.volume, timestamp: Date.now()
+            }));
+        }
+
+        function loadPlayerState() {
+            try {
+                const saved = localStorage.getItem(PLAYER_STATE_KEY);
+                if (saved) {
+                    const state = JSON.parse(saved);
+                    if (Date.now() - state.timestamp < 30000) return state;
+                }
+            } catch (e) { }
+            return null;
+        }
+
+        const savedState = loadPlayerState();
+        let currentVolume = savedState?.volume ? savedState.volume * 100 : 80;
+        let isMuted = false;
+        audioStream.volume = currentVolume / 100;
+        if (volumeSlider) volumeSlider.value = currentVolume;
+
+        function updatePlayButton() {
+            if (isLoading) {
+                playBtn.innerHTML = '<svg viewBox="0 0 24 24" class="spin"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>';
+                if (playerStatus) playerStatus.textContent = 'Connecting...';
+            } else if (isPlaying) {
+                playBtn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+                if (playerStatus) playerStatus.textContent = 'Now Playing';
+            } else {
+                playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>';
+                if (playerStatus) playerStatus.textContent = 'Live Radio';
+                if (playerTitle) playerTitle.textContent = 'Click to Play';
+            }
+        }
+
+        async function fetchNowPlayingInfo() {
+            try {
+                const response = await fetch(NOW_PLAYING_API);
+                if (response.ok) {
+                    const data = await response.json();
+                    const song = data.now_playing?.song || {};
+                    if (song.title && song.artist && playerTitle) {
+                        playerTitle.textContent = `${song.artist} - ${song.title}`;
+                    }
+                }
+            } catch (error) { }
+        }
+
+        async function startStream() {
+            if (isLoading || isPlaying) return;
+            isLoading = true;
+            updatePlayButton();
+            try {
+                audioStream.src = STREAM_URL + '?t=' + Date.now();
+                audioStream.load();
+                await audioStream.play();
+            } catch (error) {
+                isLoading = false; isPlaying = false;
+                updatePlayButton();
+                localStorage.removeItem(PLAYER_STATE_KEY);
+            }
+        }
+
+        function stopStream() {
+            audioStream.pause();
+            audioStream.src = '';
+            isPlaying = false; isLoading = false;
+            updatePlayButton();
+            localStorage.removeItem(PLAYER_STATE_KEY);
+        }
+
+        let reconnectAttempts = 0;
+        const MAX_RECONNECT_ATTEMPTS = 3;
+
+        audioStream.addEventListener('playing', () => {
+            isPlaying = true; isLoading = false; reconnectAttempts = 0;
+            updatePlayButton(); fetchNowPlayingInfo(); savePlayerState();
+        });
+        audioStream.addEventListener('pause', () => { isPlaying = false; isLoading = false; updatePlayButton(); });
+        audioStream.addEventListener('waiting', () => { isLoading = true; updatePlayButton(); });
+        audioStream.addEventListener('error', async () => {
+            if (isPlaying && reconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
+                reconnectAttempts++;
+                isLoading = true;
+                updatePlayButton();
+                await new Promise(r => setTimeout(r, 2000 * reconnectAttempts));
+                try {
+                    audioStream.src = STREAM_URL + '?t=' + Date.now();
+                    audioStream.load();
+                    await audioStream.play();
+                } catch (e) {
+                    if (reconnectAttempts >= MAX_RECONNECT_ATTEMPTS) {
+                        isPlaying = false; isLoading = false; updatePlayButton(); localStorage.removeItem(PLAYER_STATE_KEY);
+                    }
+                }
+            } else {
+                isPlaying = false; isLoading = false; updatePlayButton(); localStorage.removeItem(PLAYER_STATE_KEY);
+                reconnectAttempts = 0;
+            }
+        });
+
+        playBtn.addEventListener('click', async () => { if (isLoading) return; if (isPlaying) stopStream(); else await startStream(); });
+
+        window.addEventListener('beforeunload', () => { if (isPlaying) savePlayerState(); });
+
+        if (volumeSlider) {
+            volumeSlider.addEventListener('input', (e) => {
+                currentVolume = e.target.value;
+                audioStream.volume = currentVolume / 100;
+                isMuted = currentVolume == 0;
+                updateVolumeIcon();
+                if (isPlaying) savePlayerState();
+            });
+        }
+
+        if (volumeIcon) {
+            volumeIcon.addEventListener('click', () => {
+                isMuted = !isMuted;
+                if (isMuted) { audioStream.volume = 0; volumeSlider.value = 0; }
+                else { audioStream.volume = currentVolume / 100; volumeSlider.value = currentVolume; }
+                updateVolumeIcon();
+            });
+        }
+
+        function updateVolumeIcon() {
+            const svg = document.getElementById('volumeSvg');
+            if (!svg) return;
+            if (isMuted || volumeSlider.value == 0) {
+                svg.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
+            } else if (volumeSlider.value < 50) {
+                svg.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>';
+            } else {
+                svg.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+            }
+        }
+
+        if (savedState && savedState.isPlaying) startStream();
+        setInterval(() => { if (isPlaying) fetchNowPlayingInfo(); }, 15000);
+    </script>
+
+    <script src="/js/router.js"></script>
+</body>
+
+</html>

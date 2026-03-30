@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFLK Blog - WSQK The Squawk, Stranger Things Radio & 80s Nostalgia</title>
+
+    <meta name="description"
+        content="Explore the world of WSQK The Squawk from Stranger Things, 80s radio nostalgia, and the fan-made WFLK The Flock radio experience.">
+    <meta name="keywords"
+        content="WSQK The Squawk, Stranger Things radio, Hawkins Indiana radio station, 80s radio, WFLK The Flock, retro radio">
+    <meta name="author" content="WFLK The Flock">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.wflktheflock.com/blog">
+    <meta property="og:title" content="WFLK Blog - WSQK The Squawk & Stranger Things Radio">
+    <meta property="og:description"
+        content="Articles about WSQK The Squawk, 80s radio culture, and the fan-made WFLK experience.">
+    <meta property="og:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+    <meta property="og:site_name" content="WFLK The Flock">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WFLK Blog - 80s Radio & Stranger Things">
+    <meta name="twitter:image" content="https://www.wflktheflock.com/Resources/webthumbnail/thumbnail.png">
+
+    <link rel="icon" type="image/webp" href="Resources/logo/WFLK_The_Squawk_1767560808.webp">
+    <link rel="apple-touch-icon" href="Resources/logo/WFLK_The_Squawk_1767560808.webp">
+    <link rel="canonical" href="https://www.wflktheflock.com/blog">
+
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('/fonts/bebas-neue.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Righteous';
+            src: url('/fonts/righteous.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Crimson Text';
+            src: url('/fonts/crimson-text-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --st-red: #e71d36;
+            --st-darker: #050505;
+            --st-light: #f5f5f5;
+            --st-yellow: #ffc857;
+            --st-blue: #2ec4b6;
+        }
+
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: var(--st-darker);
+            color: var(--st-light);
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        .header {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(231, 29, 54, 0.2);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 45px;
+        }
+
+        .back-link {
+            color: var(--st-light);
+            text-decoration: none;
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--st-red);
+        }
+
+        /* Nav Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+        .nav-dropdown-toggle {
+            color: var(--st-light);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .nav-dropdown-toggle:hover {
+            color: var(--st-red);
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 10, 0.98);
+            border: 1px solid rgba(231, 29, 54, 0.3);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 180px;
+            z-index: 200;
+            margin-top: 10px;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: block;
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--st-light) !important;
+            text-decoration: none;
+            font-size: 12px !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .nav-dropdown-menu a:hover {
+            background: rgba(231, 29, 54, 0.1);
+            color: var(--st-red) !important;
+        }
+
+        /* Mobile menu additions */
+        .mobile-menu-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-top: 10px;
+        }
+        .mobile-submenu-item {
+            font-size: 18px !important;
+            padding-left: 30px !important;
+        }
+
+        .blog-hero {
+            background: linear-gradient(180deg, rgba(231, 29, 54, 0.1) 0%, transparent 100%);
+            padding: 80px 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(231, 29, 54, 0.1);
+        }
+
+        .blog-hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 8vw, 70px);
+            letter-spacing: 4px;
+            color: var(--st-light);
+            text-shadow: 0 0 20px rgba(231, 29, 54, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .blog-hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .articles-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .article-card {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(231, 29, 54, 0.15);
+            border-radius: 12px;
+            padding: 35px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            text-decoration: none;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(231, 29, 54, 0.15);
+            border-color: rgba(231, 29, 54, 0.4);
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Righteous', sans-serif;
+        }
+
+        .article-tag {
+            background: var(--st-red);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .article-tag.music {
+            background: var(--st-blue);
+            color: #0a0a0a;
+        }
+
+        .article-tag.guide {
+            background: var(--st-yellow);
+            color: #0a0a0a;
+        }
+
+        .article-card h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: var(--st-yellow);
+            margin-bottom: 10px;
+            line-height: 1.2;
+            transition: color 0.2s;
+        }
+
+        .article-card:hover h2 {
+            color: var(--st-red);
+        }
+
+        .article-excerpt {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .read-more {
+            font-family: 'Righteous', sans-serif;
+            font-size: 14px;
+            color: var(--st-blue);
+            white-space: nowrap;
+        }
+
+        .article-card:hover .read-more {
+            color: var(--st-light);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(231, 29, 54, 0.2);
+            margin-top: 40px;
+        }
+
+        .footer-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            color: var(--st-red);
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--st-red);
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .blog-hero {
+                padding: 50px 20px;
+            }
+
+            .blog-container {
+                padding: 40px 20px;
+            }
+
+            .article-card {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 25px;
+            }
+
+            .article-card h2 {
+                font-size: 24px;
+            }
+
+            .read-more {
+                display: none;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "WFLK The Flock Blog",
+        "description": "Articles about WSQK The Squawk, Stranger Things radio culture, and 80s nostalgia",
+        "url": "https://www.wflktheflock.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "WFLK The Flock"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/">
+                <img src="Resources/logo/WFLK_The_Squawk_1767560808.webp" alt="WFLK The Flock" class="logo">
+            </a>
+            <a href="/" class="back-link">← Back to Radio</a>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <h1>THE FLOCK BLOG</h1>
+        <p>Deep dives into WSQK The Squawk, Stranger Things radio lore, and the magic of 80s broadcasting</p>
+    </section>
+
+    <main class="blog-container">
+        <div class="articles-grid">
+
+            <a href="/blog/wsqk-stranger-things-radio" class="article-card">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-tag">Featured</span>
+                        <time datetime="2026-01-20">January 20, 2026</time>
+                        <span>8 min read</span>
+                    </div>
+                    <h2>Fan-Made Stranger Things Radio: From WSQK The Squawk to WFLK The Flock</h2>
+                    <p class="article-excerpt">How fans created a real 80s radio experience inspired by the fictional
+                        Hawkins, Indiana station. Discover the story behind WFLK The Flock.</p>
+                </div>
+                <span class="read-more">Read Article →</span>
+            </a>
+
+            <a href="/blog/80s-songs-radio-station" class="article-card">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-tag music">Music</span>
+                        <time datetime="2026-01-18">January 18, 2026</time>
+                        <span>6 min read</span>
+                    </div>
+                    <h2>80s Songs Radio Station: Your Ultimate Guide to Non-Stop Retro Hits</h2>
+                    <p class="article-excerpt">Discover the best radio station for 80s music with 500+ classic songs
+                        streaming 24/7. From synthpop to rock anthems.</p>
+                </div>
+                <span class="read-more">Read Article →</span>
+            </a>
+
+            <a href="/blog/best-online-radio-station" class="article-card">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-tag">Featured</span>
+                        <time datetime="2026-01-15">January 15, 2026</time>
+                        <span>7 min read</span>
+                    </div>
+                    <h2>Best Online Radio Station for Nostalgic 80s Vibes in 2026</h2>
+                    <p class="article-excerpt">Why listeners are calling WFLK The Flock the best retro radio experience
+                        on the internet. Curated playlists, authentic DJ breaks, and community.</p>
+                </div>
+                <span class="read-more">Read Article →</span>
+            </a>
+
+            <a href="/blog/listen-80s-music-free" class="article-card">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-tag guide">Guide</span>
+                        <time datetime="2026-01-10">January 10, 2026</time>
+                        <span>5 min read</span>
+                    </div>
+                    <h2>How to Listen to 80s Music Online for Free: The Complete Guide</h2>
+                    <p class="article-excerpt">The best ways to stream classic 80s hits without paying for
+                        subscriptions. No account required, no ads, just pure music.</p>
+                </div>
+                <span class="read-more">Read Article →</span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-brand">WFLK The Flock - Broadcasting since 1983</p>
+        <div class="footer-links">
+            <a href="#">Request</a>
+            <a href="/archives">Archives</a>
+            <a href="/programs">Programs</a>
+            <a href="#">Apply</a>
+            <a href="/talk-to-tina">Talk to Tina</a>
+            <a href="/beyond-the-veil">Beyond the Veil</a>
+            <a href="https://store.typicalmedia.net/collections/wflk-wsqk" target="_blank">Store</a>
+            <a href="/about">About</a>
+            <a href="https://donate.stripe.com/fZe5nZ7gp9NGemkaEF" target="_blank">Donate</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </footer>
+
+    <script src="/js/router.js"></script>
+</body>
+
+</html>
