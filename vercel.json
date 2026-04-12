@@ -73,6 +73,14 @@
       "destination": "/Public/blog/listen-80s-music-free.html"
     },
     {
+      "source": "/playlist",
+      "destination": "/Public/playlist.html"
+    },
+    {
+      "source": "/live",
+      "destination": "/Public/live.html"
+    },
+    {
       "source": "/",
       "destination": "/Public/index.html"
     },
