@@ -84,4 +84,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.wflktheflock.com/blog/one-hit-wonders-of-the-80s-the-songs-that-defined-a-decades-forgotten-stars</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
