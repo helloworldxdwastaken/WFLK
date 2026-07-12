@@ -26,7 +26,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob:; media-src 'self' blob: https://azura.typicalmedia.net https://*.typicalmedia.net; connect-src 'self' https://azura.typicalmedia.net https://api.typicalmedia.net https://discordlookup.mesavirep.xyz https://japi.rest https://cdn.discordapp.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://umami.noxamusic.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob:; media-src 'self' blob: https://azura.typicalmedia.net https://*.typicalmedia.net; connect-src 'self' https://azura.typicalmedia.net https://api.typicalmedia.net https://discordlookup.mesavirep.xyz https://japi.rest https://cdn.discordapp.com https://umami.noxamusic.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         }
       ]
     },
